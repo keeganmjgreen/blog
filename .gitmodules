@@ -1,0 +1,6 @@
+[submodule "external/how_phasors_work"]
+	path = external/how_phasors_work
+	url = https://github.com/keeganmjgreen/how_phasors_work.git
+[submodule "external/ontario_electricity_market"]
+	path = external/ontario_electricity_market
+	url = https://github.com/keeganmjgreen/ontario_electricity_market.git

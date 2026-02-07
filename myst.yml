@@ -1,0 +1,39 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: 215e429a-be4e-41b6-9a91-fafa88103cb3
+  title: Keeganʼs Blog
+  github: https://github.com/keeganmjgreen/
+  toc:
+    - file: index.md
+    - file: external/ontario_electricity_market/1_introduction_to_electricity_markets.md
+    - file: external/ontario_electricity_market/2_the_supply_and_demand_of_electricity.md
+    - file: external/how_phasors_work/0_prelude.md
+      title: "Book: How Phasors Work"
+      children:
+        - file: external/how_phasors_work/1_introduction.ipynb
+        - file: external/how_phasors_work/2_what_is_a_phasor.ipynb
+        - file: external/how_phasors_work/3_life_with_and_without_phasors.ipynb
+        - file: external/how_phasors_work/4_complex_power_and_the_power_factor.ipynb
+        - file: external/how_phasors_work/5_three_phase_power.ipynb
+    - file: software_engineering_notes_index.md
+      children:
+        - file: software_engineering_notes/apis/rest_apis.md
+        - file: software_engineering_notes/apis/openapi.md
+        - file: software_engineering_notes/django.md
+        - file: software_engineering_notes/event_driven_architecture.md
+        - file: software_engineering_notes/databases/mongodb.md
+        - file: software_engineering_notes/databases/dynamodb.md
+        - file: software_engineering_notes/css.md
+        - file: software_engineering_notes/kubernetes.md
+        - file: software_engineering_notes/helm.md
+        - file: software_engineering_notes/terraform.md
+        - file: software_engineering_notes/security.md
+        - file: software_engineering_notes/software_development.md
+        - file: software_engineering_notes/system_design.md
+        - file: software_engineering_notes/terms.md
+site:
+  options:
+    folders: true
+    logo_text: Keeganʼs Blog
+  template: book-theme
