@@ -32,8 +32,11 @@ project:
         - file: software_engineering_notes/software_development.md
         - file: software_engineering_notes/system_design.md
         - file: software_engineering_notes/terms.md
+    - file: resume.md
+      title: Résumé
 site:
   options:
     folders: true
     logo_text: Keeganʼs Blog
+    style: ./resume_styles.css
   template: book-theme
