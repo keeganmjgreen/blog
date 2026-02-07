@@ -36,7 +36,6 @@ project:
       title: Résumé
 site:
   options:
-    folders: true
     logo_text: Keeganʼs Blog
     style: ./resume_styles.css
   template: book-theme
