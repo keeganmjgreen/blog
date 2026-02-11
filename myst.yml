@@ -8,6 +8,7 @@ project:
     - file: index.md
     - file: external/ontario_electricity_market/1_introduction_to_electricity_markets.md
     - file: external/ontario_electricity_market/2_the_supply_and_demand_of_electricity.md
+    - file: clearing_electricity_markets_using_pypsa.ipynb
     - file: external/how_phasors_work/0_prelude.md
       title: "Book: How Phasors Work"
       children:
