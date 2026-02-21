@@ -33,6 +33,9 @@ project:
         - file: software_engineering_notes/software_development.md
         - file: software_engineering_notes/system_design.md
         - file: software_engineering_notes/terms.md
+    - file: iot_integration_of_a_hydroponic_farm/iot_integration_of_a_hydroponic_farm.md
+      children:
+        - file: iot_integration_of_a_hydroponic_farm/farm_process_model.md
     - file: resume.md
       title: Résumé
 site:
