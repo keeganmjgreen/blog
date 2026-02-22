@@ -1,4 +1,7 @@
 {
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff"
+    },
     "cSpell.words": [
         "Arazzo",
         "ASGI",
@@ -51,5 +54,18 @@
         "watchlist",
         "webp",
         "WSGI"
-    ]
+    ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit",
+        "source.organizeImports": "explicit"
+    },
+    "editor.formatOnSave": true,
+    "files.exclude": {
+        "**/__pycache__/": true,
+        ".pytest_cache/": true,
+        ".ruff_cache/": true
+    },
+    "files.trimTrailingWhitespace": true,
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.typeCheckingMode": "strict"
 }
