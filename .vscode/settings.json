@@ -36,6 +36,7 @@
         "phasor",
         "phasors",
         "photosensors",
+        "pycache",
         "pypsa",
         "reagraph",
         "redirector",
@@ -51,6 +52,7 @@
         "urlpatterns",
         "vantablack",
         "varchar",
+        "venv",
         "watchlist",
         "webp",
         "WSGI"
