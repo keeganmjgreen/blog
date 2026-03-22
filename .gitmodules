@@ -4,3 +4,6 @@
 [submodule "external/ontario_electricity_market"]
 	path = external/ontario_electricity_market
 	url = https://github.com/keeganmjgreen/ontario_electricity_market.git
+[submodule "external/bluegreen_resume_template"]
+	path = external/bluegreen_resume_template
+	url = https://github.com/keeganmjgreen/bluegreen_resume_template.git
