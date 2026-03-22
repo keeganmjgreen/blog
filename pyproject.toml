@@ -2,4 +2,4 @@
 name = "blog"
 dynamic = ["version"]
 requires-python = ">=3.13"
-dependencies = ["ipykernel>=7,<8", "pypsa>=1.0.7"]
+dependencies = ["ipykernel>=7,<8", "jupyter-book>=2,<3", "pypsa>=1.0.7"]
