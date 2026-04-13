@@ -34,6 +34,9 @@ project:
         - file: software_engineering_notes/system_design.md
         - file: software_engineering_notes/terms.md
     - file: git_good.md
+    - file: external/python-cluedo/README.md
+      children:
+        - file: external/python-cluedo/docs/cluedo_sat_problem.md
     - file: iot_integration_of_a_hydroponic_farm/iot_integration_of_a_hydroponic_farm.md
       children:
         - file: iot_integration_of_a_hydroponic_farm/farm_process_model.md

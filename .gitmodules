@@ -7,3 +7,6 @@
 [submodule "external/bluegreen_resume_template"]
 	path = external/bluegreen_resume_template
 	url = https://github.com/keeganmjgreen/bluegreen_resume_template.git
+[submodule "external/python-cluedo"]
+	path = external/python-cluedo
+	url = https://github.com/keeganmjgreen/python-cluedo.git
