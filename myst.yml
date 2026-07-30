@@ -3,7 +3,6 @@ version: 1
 project:
   id: 215e429a-be4e-41b6-9a91-fafa88103cb3
   title: Keeganʼs Blog
-  github: https://github.com/keeganmjgreen/
   toc:
     - file: index.md
     - file: external/ontario_electricity_market/1_introduction_to_wholesale_electricity_markets.md
@@ -43,6 +42,9 @@ project:
         - file: iot_integration_of_a_hydroponic_farm/farm_process_model.md
     - file: resume.md
       title: Résumé
+      children:
+        - url: https://raw.githubusercontent.com/keeganmjgreen/bluegreen_resume_template/refs/heads/green-resume/green_resume.pdf
+          title: Download as PDF
 site:
   options:
     logo_text: Keeganʼs Blog

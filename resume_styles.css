@@ -16,7 +16,7 @@
     --font-scale: 85.5%;
     --line-height: 130%;
     --primary-font: Inter, sans-serif;
-    --header-padding-top: 18pt;
+    --header-padding-top: 24pt;
     --info-item-margin: 2pt;
     --title-font: var(--primary-font);
     --title-font-size: xxx-large;
@@ -41,8 +41,8 @@
     --accent-color-1: #155799;
     --accent-color-2: #159957;
     /* Light Mode */
-    --main-background-color: #ffffff;
-    --side-bar-color: #eeeeee;
+    --main-background-color: #ffffff00;
+    --side-bar-color: #eeeeee00;
     --text-color: #000000;
 }
 
@@ -56,13 +56,11 @@
     }
 }
 
-@media only screen and (prefers-color-scheme: dark) {
-    :root {
-        /* Dark Mode */
-        --main-background-color: #000000;
-        --side-bar-color: #111111;
-        --text-color: #cccccc;
-    }
+html.dark {
+    /* Dark Mode */
+    --main-background-color: #00000000;
+    --side-bar-color: #11111100;
+    --text-color: #cccccc;
 }
 
 resume {
@@ -218,7 +216,7 @@ resume {
 
 .outer-container .centered-page ul {
     margin-top: var(--bulleted-item-margin);
-    margin-bottom: 0;
+    margin-bottom: var(--bulleted-item-margin);
     padding-left: 1.75em;
     list-style-type: disc;
 }

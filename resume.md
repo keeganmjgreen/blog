@@ -1,6 +1,6 @@
 ---
-downloads:
-  - file: external/bluegreen_resume_template/green_resume.pdf
+edit_url: null
+downloads: []
 ---
 
 <div class="col-page-right" style="max-width: calc(8.5in/0.9)">
@@ -11,7 +11,7 @@ downloads:
         <div class="top-left">
             <ul>
                 <li>(778) 237-5533</li>
-                <li style="font-size: small; margin-top: -1pt;"><a style="color: var(--text-color);" href="mailto:keeganmjgreen@gmail.com">keeganmjgreen@gmail.com</a></li>
+                <li style="font-size: small; margin-top: -1pt;"><a style="color: var(--text-color);" href="mailto:keeganmjgreen@gmail.com">Email</a></li>
                 <li>Ottawa, ON</li>
             </ul>
         </div>
