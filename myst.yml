@@ -53,6 +53,7 @@ site:
     logo: img/profile_photo.png
     logo_dark: img/profile_photo.png
     logo_text: Keegan Green
+    hide_search: true
     style: ./resume_styles.css
   parts:
     primary_sidebar_footer: primary-sidebar-footer.md
