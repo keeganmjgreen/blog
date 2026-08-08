@@ -7,7 +7,7 @@ project:
     - file: index.md
     - file: external/ontario_electricity_market/1_introduction_to_wholesale_electricity_markets.md
     - file: external/ontario_electricity_market/2_the_supply_and_demand_of_electricity.md
-    - file: external/ontario_electricity_market/3_real_time_and_day_ahead_markets.md
+    - file: external/ontario_electricity_market/3_real_time_and_day_ahead_electricity_markets.md
     - file: clearing_electricity_markets_using_pypsa.ipynb
     - file: opf_using_different_modeling_interfaces/opf_using_different_modeling_interfaces.md
     - file: external/how_phasors_work/0_prelude.md
