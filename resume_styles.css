@@ -1,10 +1,10 @@
 :root {
     /* CONSTANTS */
-    --us-letter-page-width: 8.5in;
+    --us-letter-page-width: 7.5in;
     --us-letter-page-height: 11in;
     /* VARIABLES */
     --scale-factor-for-printing-to-pdf: 0.9;
-    --left-padding-min: 36pt;
+    --left-padding-min: 0pt;
     --right-padding-min: var(--left-padding-min);
     --mobile-left-padding-min: 18pt;
     --mobile-right-padding-min: 18pt;

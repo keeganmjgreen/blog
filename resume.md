@@ -1,19 +1,19 @@
 ---
 edit_url: null
 downloads: []
+site:
+  hide_footer_links: true
 ---
 
-<div class="col-page-right" style="max-width: calc(8.5in/0.9)">
+<div class="col-page-right" style="max-width: calc(7.5in/0.9)">
 <div class="resume">
 <div class="outer-container">
     <div class="left-padding"></div>
     <div class="centered-page">
-        <div class="top-left">
-            <ul>
-                <li>(778) 237-5533</li>
-                <li style="font-size: small; margin-top: -1pt;"><a style="color: var(--text-color);" href="mailto:keeganmjgreen@gmail.com">Email</a></li>
-                <li>Ottawa, ON</li>
-            </ul>
+        <div class="top-left" style="font-size: small;">
+            (778) 237-5533<br>
+            <a href="mailto:keeganmjgreen@gmail.com">Email</a><br>
+            Ottawa, ON
         </div>
         <div class="top-right">
             <div class="title">Keegan Green</div>

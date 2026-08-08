@@ -2,7 +2,7 @@
 version: 1
 project:
   id: 215e429a-be4e-41b6-9a91-fafa88103cb3
-  title: Keeganʼs Blog
+  title: Keegan Green
   toc:
     - file: index.md
     - file: external/ontario_electricity_market/1_introduction_to_wholesale_electricity_markets.md
@@ -50,6 +50,11 @@ project:
           title: Download as PDF
 site:
   options:
-    logo_text: Keeganʼs Blog
+    logo: img/profile_photo.png
+    logo_dark: img/profile_photo.png
+    logo_text: Keegan Green
     style: ./resume_styles.css
+  parts:
+    primary_sidebar_footer: primary-sidebar-footer.md
+    footer: footer.md
   template: book-theme
