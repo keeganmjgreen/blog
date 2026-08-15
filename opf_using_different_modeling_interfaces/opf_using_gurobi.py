@@ -128,6 +128,7 @@ model.addConstrs(
         nlfunc.square(conductances[bus_i][bus_k])
         + nlfunc.square(susceptances[bus_i][bus_k])
     )
+    <= max_current_magnitudes[bus_i, bus_k]
     for bus_k in bus_index
     for bus_i in bus_index
 )
