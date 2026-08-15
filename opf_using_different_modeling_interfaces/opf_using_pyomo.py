@@ -34,7 +34,7 @@ model.prices = pyo.Param(
 model.quantity_steps = pyo.Param(
     model.nonzero_pq_pair_index,
     within=pyo.PositiveReals,
-    doc="Flat list of quantity steps concatenated from all generators' (price, quantity pairs)",
+    doc="Flat list of quantity steps concatenated from all generators' (price, quantity) pairs",
 )
 
 model.conductances = pyo.Param(
