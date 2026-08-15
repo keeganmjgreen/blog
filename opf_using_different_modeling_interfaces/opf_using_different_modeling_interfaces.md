@@ -9,10 +9,14 @@ Pyomo and Gurobipy are implemented as Python libraries&mdash;meaning that, altho
 Pyomo and AMPL are solver-agnostic; they can be used with a variety of free and commercial solvers. Gurobipy, on the other hand, is exclusively for use with Gurobi's proprietary solver.
 
 <!-- Deriving branch loading constraint:
+I_ik = V_i / |a_ik|^2 (y_ik^Sh / 2 + y_ik) - V_k / a_ik* y_ik
+Assume a_ik = 1 (no off-nominal turns ratios) and y_ik^Sh = 0 (no shunt admittances) so I_ik = I_ki and so referencing only the admittance matrix is necessary:
+I_ik = (V_i - V_k) y_ik = - (V_i - V_k) Y_ik
 |I_ik|
+= |- (V_i - V_k) * Y_ik|
 = |(V_i - V_k) * Y_ik|
 = |(|V_i| cos(delta_i) + j |V_i| sin(delta_i) - |V_k| cos(delta_k) - j |V_k| sin(delta_k)) * (G_ik + j B_ik)|
-= sqrt((|V_i| cos(delta_i) - |V_k| cos(delta_k))^2 + (|V_i| sin(delta_i) - j |V_k| sin(delta_k))^2) * sqrt(G_ik^2 + B_ik^2) -->
+= sqrt((|V_i| cos(delta_i) - |V_k| cos(delta_k))^2 + (|V_i| sin(delta_i) - |V_k| sin(delta_k))^2) sqrt(G_ik^2 + B_ik^2) -->
 
 ## Pyomo
 
