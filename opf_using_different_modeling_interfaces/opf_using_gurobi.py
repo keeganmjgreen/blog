@@ -44,7 +44,7 @@ fixed_voltage_magnitudes: dict[GeneratorBusIdx | SlackBusIdx, float] = {}
 min_voltage_magnitudes: dict[BusIdx, float] = {}
 max_voltage_magnitudes: dict[BusIdx, float] = {}
 
-max_current_magnitudes: dict[BusIdx, dict[BusIdx, float]] = {}
+max_apparent_powers: dict[BusIdx, dict[BusIdx, float]] = {}
 
 # Variables
 
@@ -114,7 +114,8 @@ model.addConstrs(
 ## Branch Loading Constraint
 
 model.addConstrs(
-    nlfunc.sqrt(
+    voltage_magnitudes[bus_i]
+    * nlfunc.sqrt(
         nlfunc.square(
             voltage_magnitudes[bus_i] * nlfunc.cos(voltage_angles[bus_i])
             - voltage_magnitudes[bus_k] * nlfunc.cos(voltage_angles[bus_k])
@@ -128,7 +129,7 @@ model.addConstrs(
         nlfunc.square(conductances[bus_i][bus_k])
         + nlfunc.square(susceptances[bus_i][bus_k])
     )
-    <= max_current_magnitudes[bus_i, bus_k]
+    <= max_apparent_powers[bus_i, bus_k]
     for bus_k in bus_index
     for bus_i in bus_index
 )

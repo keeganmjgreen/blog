@@ -60,7 +60,7 @@ model.fixed_voltage_magnitudes = pyo.Param(
 model.min_voltage_magnitudes = pyo.Param(model.bus_index)
 model.max_voltage_magnitudes = pyo.Param(model.bus_index)
 
-model.max_current_magnitudes = pyo.Param(
+model.max_apparent_powers = pyo.Param(
     model.bus_index, model.bus_index, within=pyo.NonNegativeReals
 )
 
@@ -152,19 +152,25 @@ model.reactive_power_flow_constraint = pyo.Constraint(
 
 
 def branch_loading_rule(m: pyo.Model, bus_i: int, bus_k: int):
-    current_magnitude = pyo.sqrt(
-        (
-            m.voltage_magnitudes[bus_i] * pyo.cos(m.voltage_angles[bus_i])
-            - m.voltage_magnitudes[bus_k] * pyo.cos(m.voltage_angles[bus_k])
+    apparent_power = (
+        m.voltage_magnitudes[bus_i]
+        * pyo.sqrt(
+            (
+                m.voltage_magnitudes[bus_i] * pyo.cos(m.voltage_angles[bus_i])
+                - m.voltage_magnitudes[bus_k] * pyo.cos(m.voltage_angles[bus_k])
+            )
+            ** 2
+            + (
+                m.voltage_magnitudes[bus_i] * pyo.sin(m.voltage_angles[bus_i])
+                - m.voltage_magnitudes[bus_k] * pyo.sin(m.voltage_angles[bus_k])
+            )
+            ** 2
         )
-        ** 2
-        + (
-            m.voltage_magnitudes[bus_i] * pyo.sin(m.voltage_angles[bus_i])
-            - m.voltage_magnitudes[bus_k] * pyo.sin(m.voltage_angles[bus_k])
+        * pyo.sqrt(
+            m.conductances[bus_i, bus_k] ** 2 + m.susceptances[bus_i, bus_k] ** 2
         )
-        ** 2
-    ) * pyo.sqrt(m.conductances[bus_i, bus_k] ** 2 + m.susceptances[bus_i, bus_k] ** 2)
-    return current_magnitude <= m.max_current_magnitudes[bus_i, bus_k]
+    )
+    return apparent_power <= m.max_apparent_powers[bus_i, bus_k]
 
 
 model.branch_loading_constraint = pyo.Constraint(

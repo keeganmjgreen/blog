@@ -33,7 +33,7 @@ param fixed_voltage_magnitudes {GENERATOR_BUS_INDEX union SLACK_BUS_INDEX};
 param min_voltage_magnitudes {BUS_INDEX};
 param max_voltage_magnitudes {BUS_INDEX};
 
-param max_current_magnitudes {BUS_INDEX, BUS_INDEX} >= 0;
+param max_apparent_powers {BUS_INDEX, BUS_INDEX} >= 0;
 
 # Variables
 
@@ -87,7 +87,7 @@ subject to ReactivePowerFlowConstraint {bus_i in BUS_INDEX}:
 ## Branch Loading Constraint
 
 subject to BranchLoadingConstraint {bus_i in BUS_INDEX, bus_k in BUS_INDEX}:
-    sqrt(
+    VoltageMagnitudes[bus_i] * sqrt(
         (
             VoltageMagnitudes[bus_i] * cos(VoltageAngles[bus_i])
             - VoltageMagnitudes[bus_k] * cos(VoltageAngles[bus_k])
@@ -98,7 +98,7 @@ subject to BranchLoadingConstraint {bus_i in BUS_INDEX, bus_k in BUS_INDEX}:
         )^2
     ) * sqrt(
         conductances[bus_i, bus_k]^2 + susceptances[bus_i, bus_k]^2
-    ) <= max_current_magnitudes[bus_i, bus_k];
+    ) <= max_apparent_powers[bus_i, bus_k];
 
 # Bus Type Constraints
 
